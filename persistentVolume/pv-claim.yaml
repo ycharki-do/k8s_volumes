@@ -5,7 +5,7 @@ metadata:
 spec:
   accessModes:
   - ReadWriteOnce
-  storageClassName: default
+  storageClassName: default # this built-in storage class using azureDisk in azureCloud
   resources:
     requests:
       storage: 1Gi
