@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: web-git
   labels:
-    app: web-get
+    app: web-git
 spec:
   containers: 
     - name: c1
@@ -21,3 +21,15 @@ spec:
         repository: https://github.com/luksa/kubia-website-example.git
         revision: master
         directory: .
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: gitrepo-svc
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+  selector: 
+    app: web-git
