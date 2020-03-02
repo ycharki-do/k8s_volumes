@@ -9,7 +9,7 @@ spec:
   containers:
     - image: mongo
       name: mongodb
-      volumeMount: 
+      volumeMounts: 
         - name: volume
           mountPath: /data/db
       ports:
